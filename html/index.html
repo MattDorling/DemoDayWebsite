@@ -204,13 +204,13 @@
         <section class="wrapper style1 align-center onscroll-fade-in" id="hw">
             <div class="inner">
                 <h2>Hardware</h2>
-                <p> We aimed to make RoboGardener be reliable and adaptable to different types of garden envrionment. Three factors were crucial to achieve this goal: the design of the robot body, the design of the collection mechanism, and the electronic
+                <p> We aimed to make RoboGardener reliable and adaptable to different types of garden envrionments. Three factors were crucial to achieve this goal in the hardware: the design of the robot body, the design of the collection mechanism, and the electronic
                     parts </p>
 
                 <section class="spotlight style1 orient-right content-align-left image-position-center">
                     <div class="content">
                         <h2>Rugged Body</h2>
-                        <p>The body consists of 6 off road wheels and a waterproof plastic storage to operate in rough envrionment. The storage uses 2 actuators to dispose collected pine cones similar to a dump truck. </p>
+                        <p>The body consists of 6 off road wheels and a waterproof plastic storage to operate in rough environment. The storage uses 2 actuators to dispose collected pine cones in a mechanism similar  to a dump truck. </p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
                         </ul> -->
@@ -222,7 +222,7 @@
                 <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
                     <div class="content">
                         <h2>Quiet and Efficient</h2>
-                        <p>The spike wheels are mounted on the back of the robot. The wheels collect pine cones where RoboGardener goes without using any additional power. This mechanism will be noiseless and will minimize the risk of the robot harming any
+                        <p>Our spike-based rubberised passive collection mechanism is mounted on the back of the robot. The wheels collect pine cones where RoboGardener goes without using any additional power. This mechanism will be noiseless and will minimize the risk of the robot harming any
                             garden life by reducing contacting surface with the ground. It can also pick up multiple pine cones at a time.</p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
@@ -235,7 +235,7 @@
                 <section class="spotlight style1 orient-right content-align-left image-position-center">
                     <div class="content">
                         <h2>Fast and Stable</h2>
-                        <p>Raspberry Pi 4B 4GB RAM with 1300Mbps dual band wifi adaptor will let RoboGardener have seamless object detection and long range connection between users and RoboGardener.</p>
+                        <p>Raspberry Pi 4B 4GB RAM with 1300Mbps dual band wifi adaptor will let RoboGardener have seamless machine-learning based pinecone detection and long range connection between users and RoboGardener.</p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
                         </ul> -->
@@ -247,8 +247,7 @@
                 <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
                     <div class="content">
                         <h2>Clear Sight</h2>
-                        <p>Object detection is one of the main features of RoboGardener; thus, it cannot emphasize the importance of camera enough. Sony IMX219 8-megapixel sensor and the Exmor R back-illuminated sensor architecture can satisfy the needs
-                            with high-definition video.</p>
+                        <p>Pinecone detection using our trained YOLOv5 machine learning model is one of the main features of RoboGardener; thus a high-quality, low-power camera for our project was critical. Sony IMX219 8-megapixel sensor and the Exmor R back-illuminated sensor architecture can satisfy the needs with high-definition 1080p video, all stored and processed onboard to protect your privacy.</p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
                         </ul> -->
@@ -260,7 +259,7 @@
                 <section class="spotlight style1 orient-right content-align-left image-position-left">
                     <div class="content">
                         <h2>Charge Ready</h2>
-                        <p>The base station with Raspberry Pi zero and a weight sensor will generate wireless connection among RoboGardener, users, and the base station to provide useful information to users such as battery status and pine cone gauge at
+                        <p>The base station with Raspberry Pi Zero and pinecone weight sensor will generate a wireless connection among RoboGardener, users, and the base station to provide useful information to users such as battery status and amount of pinecones at
                             the base station. RoboGardener will come back to the base station when its battery goes low automatically.</p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
@@ -581,8 +580,7 @@
             <div class="inner">
                 <h2>Evaluation</h2>
                 <p>Both over the course of development and after creating our initial prototype, we conducted in-depth
-                testing to quantify the performance, capabilities, and reliability of RoboGardener. The following section
-                describes our process and findings.</p>
+                testing to quantify the performance, capabilities, and reliability of RoboGardener. </p>
 
                 <div class="index align-left">
                     <section>
@@ -590,7 +588,7 @@
                             <h3>Pinecones Collected Per Minute</h3>
                         </header>
                         <div class="content">
-                            <p>Probably the most important metric to the end consumer of RoboGardener is the number of
+                            <p>We consider the most important metric to the end consumer of RoboGardener being the number of
                             pinecones it is capable of collecting per minute. This metric was chosen as it represents a
                             good summary of how all of RoboGardener's individual components cooperate together to achieve
                             a single end goal: collecting as many pinecones as quickly as possible.</p>
@@ -609,10 +607,10 @@
                 <div class="index align-left">
                     <section>
                         <header>
-                            <h3>Effect of CV Accuracy on Performance</h3>
+                            <h3>Effect of YOLOv5 CV Accuracy on Performance</h3>
                         </header>
                         <div class="content">
-                            <p>We also performed testing to see the effect of adjusting the simulated computer vision (CV) accuracy within Webots, and seeing what effect it had on robot performance. The idea behind this test was to try and find the range of acceptable CV accuracies where the robot would still perform in a satisfactory manner.</p>
+                            <p>We also performed testing to see the effect of adjusting our YOLOv5 computer vision (CV) accuracy within Webots, and seeing what effect it had on robot performance. The idea behind this test was to try and find the range of acceptable CV accuracies where the robot would still perform in a satisfactory manner.</p>
                             <div class="image fit">
                                 <img src="images/cv_accuracy_graph.png" alt="Graph of CV accuracy"/>
                             </div>
@@ -620,7 +618,10 @@
 
                             <p>Robot performance barely suffers in the high density environment: this is because with a high pinecone density, even with poor CV accuracy, it is likely that the robot will bump into a pinecone purely by chance anyway. This is not the case with the low density environment: with few pinecones, the reliance on CV is much stronger, so the performance of the robot correspondingly suffers much greater with poor CV accuracy. However, we only expect poor CV performance in the absolute worst conditions (e.g. when a majority of the camera is obscured), so are happy that in most cases the PPM degradation hit will only be relatively minor.</p>
 
+                            <p> We also performed real world testing of our trained YOLOv5 computer vision algorithm. This is the machine learning model that we hand trained on over 100 images of pinecones, and filmed videos around the Meadows to test with! To see how robust our vision system was, team members simulated dirt on the camera lens as may happen during normal operation of the RoboGardener, and were delighted to see that pinecones were still accurately detected to an impressive, albeit lower, degree. This shows the resilience of our machine learning against dirt and demonstrates our work as a viable real product:</p>
+
                             <p>In addition, since the performance of the CV is largely based on the internal pinecone ML model, the performance of the CV can continually be improved via software updates even after the user has purchased their RoboGardener. By adjusting simulator settings to reflect real world conditions, we are more confident in the transfer of RoboGardener from Webots to the real world.</p>
+
                         </div>
                     </section>
                 </div>
