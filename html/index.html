@@ -554,6 +554,51 @@
                 </div>
             </div>
         </section>
+        <section class="wrapper style1 align-center">
+            <div class="inner">
+                <h2>Algorithms</h2>
+                This section will provide a very basic overview of the flow of control algorithms to give an idea of how it operates.
+                <section>
+                    <div class="index align-left">
+                        <div class="content">
+                            <dl>
+                                <dt>Collecting Pinecones</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Leave the base station</li>
+                                        <li>Move forwards. If at any point the CV system detects a pinecone, change course to head towards it.</li>
+                                        <li>Collect any pinecone that the robot drives over using our collection mechanism.</li>
+                                        <li>If no pinecones are detected, move forwards until the robot finds the boundary wire.</li>
+                                        <li>When the robot hits the boundary wire, randomly rotate then move forwards and continue collection.</li>
+                                    </ul>
+                                </dd>
+                                <dt>Returning to base station</dt>
+                                <dd>
+                                    The <b>automatic return to base station</b> algorithm is triggered by either a low battery level or a the user pressing <b>Stop</b> on the user interface.
+                                    <ul>
+                                        <li>The robot searches for a boundary wire. When it hits the boundary wire:</li>
+                                        <li>Instead of bouncing away from it as before, turn right and move along it like a handrail in a clockwise direction.</li>
+                                        <li>Eventually, it will reach the base station. Here, automatic docking occurs, aided by computer vision.</li>
+                                    </ul>
+                                </dd>
+                                <dt>Automatic docking</dt>
+                                <dd>
+                                    <ul>
+                                        <li>When the guide post has been recognized, the robot stops in front of it.</li>
+                                        <li>Turn left until computer vision recognizes charger in the correct position.</li>
+                                        <li>Drive forwards to move up the ramp onto the charger.</li>
+                                        <li>Stop on the charger and automatically operate dumping mechanism.</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                </section>
+
+
+            </div>
+        </section>
 
         <!-- User guide -->
         <section class="spotlight style1 orient-left content-align-center image-position-center onscroll-image-fade-in" id="first">
