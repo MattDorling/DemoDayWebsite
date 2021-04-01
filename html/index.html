@@ -258,7 +258,7 @@
                 <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" >
                     <div class="content">
                         <h2>Quiet and Efficient</h2>
-                        <p>The spike wheels are mounted on the back of the robot. The wheels collect pine cones where RoboGardener goes. This mechanism will be noiseless and will minimize the risk of the robot harming any garden life by reducing contacting space to the ground. It can also pick up multiple pine cones at a time.</p>
+                        <p>The spike wheels are mounted on the back of the robot. The wheels collect pine cones where RoboGardener goes without using any additional power. This mechanism will be noiseless and will minimize the risk of the robot harming any garden life by reducing contacting surface with the ground. It can also pick up multiple pine cones at a time.</p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
                         </ul> -->
@@ -267,10 +267,10 @@
                         <img src="images/final_mech2.jpg" alt="" />
                     </div>
                 </section>
-                <section class="spotlight style1 orient-right content-align-left image-position-center invert">
+                <section class="spotlight style1 orient-right content-align-left image-position-center">
                     <div class="content">
                         <h2>Fast and Stable</h2>
-                        <p>Raspberry Pi 4B 4GB RAM with 1300Mbps dual band wifi adaptor will let RoboGardener have seamless object detection functionality and long range connection between users and RoboGardener.</p>
+                        <p>Raspberry Pi 4B 4GB RAM with 1300Mbps dual band wifi adaptor will let RoboGardener have seamless object detection and long range connection between users and RoboGardener.</p>
                         <!-- <ul class="actions stacked">
                             <li><a href="#" class="button">Learn More</a></li>
                         </ul> -->
@@ -291,9 +291,145 @@
                         <img src="images/rbpicam.webp" alt="" />
                     </div>
                 </section>
-
+                <section class="spotlight style1 orient-right content-align-left image-position-left">
+                    <div class="content">
+                        <h2>Charge Ready</h2>
+                        <p>The base station with Raspberry Pi zero and a weight sensor will generate wireless connection among RoboGardener, users, and the base station to provide useful information to users such as battery status and pine cone gauge at the base station. RoboGardener will come back to the base station when its battery goes low automatically.</p>
+                        <!-- <ul class="actions stacked">
+                            <li><a href="#" class="button">Learn More</a></li>
+                        </ul> -->
+                    </div>
+                    <div class="image">
+                        <img src="images/base_station.png" alt="" />
+                    </div>
+                </section>
             </div>
         </section>
+
+        <!-- budet section -->
+        <section class="wrapper style1 align-center">
+            <div class="inner">
+                <h2>Budget</h2>
+                <p>Overall price was estimated as we assumed to produce more than 100 units. Research has been done into publicly available robotic components, by comparing prices across popular electronics and robotics retailers.<p>
+                <div class="index align-left">
+                    <section>
+                        <header>
+                            <h3>Budget Table</h3>
+                        </header>
+                        <div class="content">
+
+                            <!-- <h4>Default</h4> -->
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price (&#163;)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Raspberry Pi 4B</td>
+                                            <td>4GB model. Main CPU.</td>
+                                            <td>43</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rasoberry Pi Zero</td>
+                                            <td>With WiFi module. For the base station.</td>
+                                            <td>14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arduino</td>
+                                            <td>Mega2560. Motor control.</td>
+                                            <td>29.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camera module</td>
+                                            <td>Object detection.</td>
+                                            <td>20.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wheels</td>
+                                            <td>6 off-road wheels. 200mm diameter.</td>
+                                            <td>75.36</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Motor DC gearbox</td>
+                                            <td>6 for wheels. 2 for actuators. 24V 800rpm </td>
+                                            <td>45.68</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Power bank</td>
+                                            <td>For the robot. 12V 22000mAh.</td>
+                                            <td>29.01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Robot body</td>
+                                            <td>Container to store pine cones.</td>
+                                            <td>8.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actuators</td>
+                                            <td>To dispose collectied pine cones. 12V 300N. 300mm stroke.</td>
+                                            <td>31.74</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Magnetic charger</td>
+                                            <td>To charge RoboGardener at the base station</td>
+                                            <td>1.46</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Base station materials</td>
+                                            <td>PVC plastic</td>
+                                            <td>5.17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Boundary Wire</td>
+                                            <td>100 meters long copper conductor.</td>
+                                            <td>21.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NE555</td>
+                                            <td>Boundary wire signal generator.</td>
+                                            <td>0.24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LM324</td>
+                                            <td>Boundary wire signal sensor.</td>
+                                            <td>0.30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weight sensor</td>
+                                            <td>To measure how much the base station is filled up with pine cones.</td>
+                                            <td>1.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WiFi adapter</td>
+                                            <td>For the robot to communicate with the base station and users</td>
+                                            <td>3.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Miscellaneous</td>
+                                            <td>2.1 mm barrel jack, breadboard, resistors, power supply, etc.</td>
+                                            <td>15</td>
+                                        </tr>
+                                                                                
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>346.3</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
         <!-- Features Sumamry -->
         <section class="wrapper style1 align-center">
             <div class="inner">
