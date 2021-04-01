@@ -107,9 +107,9 @@
         <section class="wrapper style1 align-center">
             <div class="inner">
                 <h2>CAD Model and Webots Simulation Gallery</h2>
-                <p>This gallery will show the robot CAD model and garden model in the simulator, 
+                <p>This gallery showcases the robot CAD model and garden model in the simulator, 
                 as well as simulation pictures of characteristic functions of RoboGardener in the simulation. 
-                Characteristic functions includes 'Charge at Base Station', 'Move Towards Pine Cone then Collect it', 'Dump Pine Cones'.
+                Characteristic functions includes 'Charge at Base Station', 'Move Towards Pine Cone and Collect' as well as 'Dump Pine Cones'.
                  Scroll the images below and click on them to see more details.</p>
             </div>
             <div class="gallery style2 medium lightbox onscroll-fade-in">
@@ -619,6 +619,8 @@
                             <p>Robot performance barely suffers in the high density environment: this is because with a high pinecone density, even with poor CV accuracy, it is likely that the robot will bump into a pinecone purely by chance anyway. This is not the case with the low density environment: with few pinecones, the reliance on CV is much stronger, so the performance of the robot correspondingly suffers much greater with poor CV accuracy. However, we only expect poor CV performance in the absolute worst conditions (e.g. when a majority of the camera is obscured), so are happy that in most cases the PPM degradation hit will only be relatively minor.</p>
 
                             <p> We also performed real world testing of our trained YOLOv5 computer vision algorithm. This is the machine learning model that we hand trained on over 100 images of pinecones, and filmed videos around the Meadows to test with! To see how robust our vision system was, team members simulated dirt on the camera lens as may happen during normal operation of the RoboGardener, and were delighted to see that pinecones were still accurately detected to an impressive, albeit lower, degree. This shows the resilience of our machine learning against dirt and demonstrates our work as a viable real product:</p>
+
+                            <iframe width="800" height="450" src="https://www.youtube.com/embed/TN5UNh2yhVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             <p>In addition, since the performance of the CV is largely based on the internal pinecone ML model, the performance of the CV can continually be improved via software updates even after the user has purchased their RoboGardener. By adjusting simulator settings to reflect real world conditions, we are more confident in the transfer of RoboGardener from Webots to the real world.</p>
 
