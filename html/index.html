@@ -573,13 +573,71 @@
 
                     </div>
                 </section>
-
-
             </div>
         </section>
 
+        <!-- Evaluation -->
+        <section class="wrapper style1 align-center onscroll-fade-in" id="evaluation">
+            <div class="inner">
+                <h2>Evaluation</h2>
+                <p>Both over the course of development and after creating our initial prototype, we conducted in-depth
+                testing to quantify the performance, capabilities, and reliability of RoboGardener. The following section
+                describes our process and findings.</p>
 
-  
+                <div class="index align-left">
+                    <section>
+                        <header>
+                            <h3>Pinecones Collected Per Minute</h3>
+                        </header>
+                        <div class="content">
+                            <p>Probably the most important metric to the end consumer of RoboGardener is the number of
+                            pinecones it is capable of collecting per minute. This metric was chosen as it represents a
+                            good summary of how all of RoboGardener's individual components cooperate together to achieve
+                            a single end goal: collecting as many pinecones as quickly as possible.</p>
+                            <div class="image fit">
+                                <img src="images/pinecones_collected_graph.png" alt="Graph of pinecones collected"/>
+                            </div>
+                            <p>We conducted testing to measure the average pinecones collected per minute (PPM) at varying garden pinecone densities. In the Webots simulator, we ran RoboGardener on a variety of gardens with various levels of pinecone densities: the results are shown in the graph above. We can see that performance scales roughly linearly with the density of pinecones. At these rates, in a typical garden of 100m^2 with 400 pinecones, RoboGardener will complete in just over 11 minutes. Initial pinecone clustering and distribution can certainly make a difference, this is an area that we really would have liked to have explored in further testing had we more time.</p>
+
+                            <p>The key component in achieving these PPM figures is the CV aspect of RoboGardener. In earlier iterations of RoboGardener, the navigation was based on a pure random walk algorithm found in robots such as entry level vacuum cleaners (e.g. Roomba). An issue we encountered was that since RoboGardener would travel in straight lines until it hit an object, at which it randomly picked a new direction to travel in, it would frequently miss pinecones that were right to the sides of the path it was travelling on, particularly in environments with low pinecone densities. The addition of CV allows RoboGardener to essentially enlarge it's field of vision and specifically hunt out pinecones that it can detect using its camera.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <hr />
+
+                <div class="index align-left">
+                    <section>
+                        <header>
+                            <h3>Effect of CV Accuracy on Performance</h3>
+                        </header>
+                        <div class="content">
+                            <p>We also performed testing to see the effect of adjusting the simulated computer vision (CV) accuracy within Webots, and seeing what effect it had on robot performance. The idea behind this test was to try and find the range of acceptable CV accuracies where the robot would still perform in a satisfactory manner.</p>
+                            <div class="image fit">
+                                <img src="images/cv_accuracy_graph.png" alt="Graph of CV accuracy"/>
+                            </div>
+                            <p>The CV accuracy was manually adjusted in Webots at varying levels: an accuracy of 100% means that the robot has a perfect recall rate of 100%. The average number of pinecones collected per minute (PPM) was measured at these varying accuracy levels, in two garden environments of different pinecone densities. The results are shown in the graph above; degradation of PPM compared to perfect CV accuracy is displayed on the vertical axis. The measure of degradation compared to perfect CV, instead of the raw PPM values, was used to normalize the data (it is difficult to see the difference between the two density gardens when comparing raw PPM values).</p>
+
+                            <p>Robot performance barely suffers in the high density environment: this is because with a high pinecone density, even with poor CV accuracy, it is likely that the robot will bump into a pinecone purely by chance anyway. This is not the case with the low density environment: with few pinecones, the reliance on CV is much stronger, so the performance of the robot correspondingly suffers much greater with poor CV accuracy. However, we only expect poor CV performance in the absolute worst conditions (e.g. when a majority of the camera is obscured), so are happy that in most cases the PPM degradation hit will only be relatively minor.</p>
+
+                            <p>In addition, since the performance of the CV is largely based on the internal pinecone ML model, the performance of the CV can continually be improved via software updates even after the user has purchased their RoboGardener. By adjusting simulator settings to reflect real world conditions, we are more confident in the transfer of RoboGardener from Webots to the real world.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- User guide -->
+        <section class="spotlight style1 orient-left content-align-center image-position-center onscroll-image-fade-in" id="first">
+            <div class="content">
+                <h2>User Guide</h2>
+                <p>We created a user guide to help customers get an overview of their RoboGardener system and to set it up.</p>
+                <ul class="actions stacked">
+                    <li><a href="files/group-20-userguide.pdf" class="button primary">Download the User Guide</a></li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Market Research -->
         <section class="wrapper style1 align-center">
             <div class="inner">
